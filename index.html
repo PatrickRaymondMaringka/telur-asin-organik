@@ -27,258 +27,36 @@
     .btn-outline{border:2px solid var(--accent);color:var(--accent);background:transparent}
     .meta{margin-top:12px;color:var(--muted)}
 
-    /* Form styling (professional) */
-    .order-form{margin-top:18px;background:linear-gradient(180deg,#ffffff,#fbfff6);padding:16px;border-radius:12px;border:1px solid rgba(0,0,0,0.03)}
-    .order-form h3{margin:0 0 8px 0;color:#1f6f3a}
-    .form-row{display:flex;gap:10px;margin-top:10px}
-    .form-group{flex:1;display:flex;flex-direction:column}
-    label{font-size:13px;color:var(--muted);margin-bottom:6px}
-    input[type=text], input[type=number], textarea, select{padding:10px;border-radius:8px;border:1px solid rgba(0,0,0,0.08);font-size:14px}
-    textarea{resize:vertical;min-height:80px}
-    .small{font-size:13px;color:var(--muted);margin-top:6px}
-    .order-bottom{display:flex;align-items:center;gap:12px;margin-top:12px}
-    .total-box{margin-left:auto;text-align:right}
-    .total-box .label{font-size:13px;color:var(--muted)}
-    .total-box .value{font-size:18px;font-weight:800}
-
-    /* WhatsApp button */
-    .wa-btn{background:#25D366;color:white;padding:12px 18px;border-radius:10px;border:none;font-weight:800;display:inline-flex;align-items:center;gap:10px;cursor:pointer}
-    .wa-btn svg{width:20px;height:20px}
-
-    .testimoni-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
-    .testi{padding:12px;border-radius:10px;background:linear-gradient(180deg, #fff, #fbfbfb);border:1px solid rgba(0,0,0,0.04);min-height:120px}
-    .stars{color:#d6a600;font-weight:800}
-
     .footer{text-align:center;color:var(--muted);font-size:14px;margin-top:20px}
-    @media (max-width:900px){.hero{grid-template-columns:1fr}.testimoni-grid{grid-template-columns:1fr}}
-
-    /* Success modal styles */
-    .modal-backdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.4);align-items:center;justify-content:center;z-index:9999}
-    .modal-card{background:#fff;padding:20px;border-radius:10px;max-width:420px;margin:0 16px;text-align:left;box-shadow:0 10px 30px rgba(0,0,0,0.2)}
   </style>
 </head>
 <body>
   <div class="wrap">
-    <div class="top">
-      <div class="brand">
-        <div class="logo card"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD..." alt="Telur Asin"></div>
-        <div>
-          <h1>Telur Asin Organik - Jejak Patrick</h1>
-          <p class="lead">Rasa tradisional — sehat, tanpa pengawet.</p>
-        </div>
-      </div>
-      <div style="text-align:right">
-        <div style="font-weight:700;color:var(--accent)">Pesan via WhatsApp</div>
-        <div style="color:var(--muted);margin-top:6px">+62 851-8317-6504</div>
-      </div>
-    </div>
+    <h1 style="text-align:center;color:var(--accent)">Telur Asin Organik - Jejak Patrick</h1>
+    <p style="text-align:center;color:var(--muted)">Rasa tradisional — sehat, tanpa pengawet</p>
 
-    <div class="hero" style="margin-top:18px">
+    <div class="hero">
       <div class="card photo">
-        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD..." alt="Telur Asin Organik">
+        <img src="https://raw.githubusercontent.com/patrickraymondmaringka/telur-asin-organik/main/telur%20asin.jpg" alt="Telur Asin Organik">
       </div>
-
       <div class="card">
-        <div class="badge" style="display:inline-block;padding:6px 10px;background:rgba(47,143,78,0.12);color:var(--accent);border-radius:999px;font-weight:700">Terlaris</div>
-        <h2 style="margin-top:10px">Telur Asin Organik — Rasa Khas Tradisional</h2>
+        <h2>Telur Asin Organik — Rasa Khas Tradisional</h2>
         <div class="price">Rp 6.500 <small style="font-size:14px;color:var(--muted);font-weight:600">/ butir</small></div>
         <p class="desc">Dibuat dari ayam peternakan organik dengan pakan alami. Metode pengasinan tradisional menghasilkan kuning telur padat, rasa gurih, dan aroma yang menggoda.</p>
-
-        <!-- Form pemesanan -->
-        <div class="order-form" id="orderForm">
-          <h3>Pesan Sekarang</h3>
-          <div class="small">Isi data di bawah supaya pesanmu langsung terkirim ke WhatsApp kami.</div>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="buyerName">Nama lengkap</label>
-              <input type="text" id="buyerName" placeholder="Contoh: Budi Santoso">
-            </div>
-            <div class="form-group">
-              <label for="buyerPhone">Nomor WhatsApp</label>
-              <input type="text" id="buyerPhone" placeholder="Contoh: 0812xxxxxx">
-            </div>
-          </div>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="qty">Jumlah (butir)</label>
-              <input type="number" id="qty" min="1" value="10">
-            </div>
-            <div class="form-group">
-              <label for="package">Paket (opsional)</label>
-              <select id="package">
-                <option value="none">-- Pilih paket --</option>
-                <option value="none">Beli per butir</option>
-                <option value="paket10">Paket 10 butir - Diskon 5%</option>
-                <option value="paket50">Paket 50 butir - Diskon 10%</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="form-group" style="margin-top:8px">
-            <label for="address">Alamat pengiriman</label>
-            <textarea id="address" placeholder="Contoh: Jl. Merdeka No.10, Tangerang"></textarea>
-          </div>
-
-          <div class="order-bottom">
-            <div class="small">Harga per butir: Rp 6.500</div>
-            <div class="total-box">
-              <div class="label">Estimasi total</div>
-              <div class="value">Rp <span id="totalValue">65.000</span></div>
-            </div>
-          </div>
-
-          <div style="margin-top:12px;display:flex;gap:10px;align-items:center">
-            <button class="wa-btn" id="sendWa">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.472-.148-.672.15-.198.297-.767.967-.94 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.298-.018-.459.13-.608.134-.133.298-.347.447-.52.149-.173.199-.298.298-.497.099-.198.05-.372-.025-.52-.074-.148-.672-1.612-.921-2.207-.242-.579-.487-.5-.672-.51l-.573-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.064 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487 0.709.306 1.26.489 1.69.626.71.226 1.355.194 1.867.118.57-.085 1.758-.718 2.006-1.41.248-.693.248-1.287.173-1.41-.074-.123-.272-.198-.57-.347z" fill="#fff"/></svg>
-              Kirim Pesanan via WhatsApp
-            </button>
-
-            <button class="btn btn-outline" id="resetForm">Reset</button>
-          </div>
-
-          <div class="small" style="margin-top:10px;color:var(--muted)">Dengan mengirim pesanan, kamu akan diarahkan ke WhatsApp. Mohon cek kembali nama dan alamat sebelum mengirim.</div>
-        </div>
-
         <div class="meta">Stok: <strong>Terbatas</strong> • Pengiriman: Seluruh Indonesia</div>
       </div>
     </div>
 
     <section id="testimoni" style="margin-top:22px">
       <h3>Testimoni Pelanggan</h3>
-      <div class="testimoni-grid">
-        <!-- tiga testimoni dengan avatar ter-embed -->
-        <div class="testi">
-          <div style="display:flex;gap:10px;align-items:center">
-            <div style="width:46px;height:46px;border-radius:8px;overflow:hidden;background:#ffbebe"><img style="width:100%;height:100%;object-fit:cover" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD..." alt="Rina"></div>
-            <div><strong>Rina W. – Ibu Rumah Tangga</strong><div style="font-size:13px;color:#6b6b6b">Jakarta</div></div>
-          </div>
-          <p style="margin-top:10px;color:#6b6b6b">Saya pertama kali coba beli telur asin ini karena penasaran. Ternyata rasanya gurih banget dan kuning telurnya padat. Sekarang tiap minggu saya selalu pesan buat stok di rumah.</p>
-          <div class="stars">★★★★★</div>
-        </div>
-
-        <div class="testi">
-          <div style="display:flex;gap:10px;align-items:center">
-            <div style="width:46px;height:46px;border-radius:8px;overflow:hidden;background:#bee3ff"><img style="width:100%;height:100%;object-fit:cover" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJt8mP..." alt="Budi"></div>
-            <div><strong>Budi S. – Pemilik Katering</strong><div style="font-size:13px;color:#6b6b6b">Bandung</div></div>
-          </div>
-          <p style="margin-top:10px;color:#6b6b6b">Telurnya enak dan konsisten kualitasnya. Sangat cocok buat menu katering saya, pelanggan juga banyak yang suka. Proses pesan lewat WhatsApp juga cepat dan ramah.</p>
-          <div class="stars">★★★★★</div>
-        </div>
-
-        <div class="testi">
-          <div style="display:flex;gap:10px;align-items:center">
-            <div style="width:46px;height:46px;border-radius:8px;overflow:hidden;background:#d4ffbe"><img style="width:100%;height:100%;object-fit:cover" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD..." alt="Sri"></div>
-            <div><strong>Sri M. – Penjual Nasi Uduk</strong><div style="font-size:13px;color:#6b6b6b">Semarang</div></div>
-          </div>
-          <p style="margin-top:10px;color:#6b6b6b">Saya jual nasi uduk dan banyak pelanggan yang nambah telur asin dari sini. Rasanya beda dari telur asin biasa, gurihnya pas dan tidak terlalu asin. Kemasannya juga aman waktu dikirim.</p>
-          <div class="stars">★★★★☆</div>
-        </div>
+      <div class="card">
+        <p><strong>Rina W. – Jakarta:</strong> Telurnya gurih banget dan kuning telurnya padat. Sekarang tiap minggu saya selalu pesan buat stok di rumah.</p>
+        <p><strong>Budi S. – Bandung:</strong> Telurnya enak dan konsisten kualitasnya. Cocok buat katering saya, pelanggan juga suka.</p>
+        <p><strong>Sri M. – Semarang:</strong> Rasanya beda dari telur asin biasa, gurihnya pas dan tidak terlalu asin. Kemasannya juga aman waktu dikirim.</p>
       </div>
     </section>
 
     <div class="footer">&copy; 2025 Telur Asin Organik - Jejak Patrick • Harga per butir Rp 6.500 • Pesan via WhatsApp: +62 851-8317-6504</div>
   </div>
-
-  <!-- Success modal -->
-  <div id="successModal" class="modal-backdrop">
-    <div class="modal-card">
-      <h3 style="margin:0 0 8px 0;color:#1f6f3a">Pesanan Siap Dikirim</h3>
-      <p id="successText" style="margin:0 0 12px;color:#333">Terima kasih! Kami sudah menyiapkan pesanmu. Setelah kamu menyelesaikan pengiriman pesan di WhatsApp, kembali ke sini lalu klik "Saya sudah mengirim" untuk mengonfirmasi.</p>
-      <div style="display:flex;gap:8px;justify-content:flex-end">
-        <button id="closeModal" style="padding:8px 12px;border-radius:8px;border:1px solid rgba(0,0,0,0.08);background:#fff;cursor:pointer">Tutup</button>
-        <button id="confirmReturn" style="padding:8px 12px;border-radius:8px;border:none;background:#2f8f4e;color:white;cursor:pointer">Saya sudah mengirim</button>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    // Configuration: isi WEBHOOK_URL jika ingin simpan pesanan otomatis
-    const WEBHOOK_URL = '';
-
-    const PRICE = 6500;
-    const qtyEl = document.getElementById('qty');
-    const packageEl = document.getElementById('package');
-    const totalValueEl = document.getElementById('totalValue');
-    const sendBtn = document.getElementById('sendWa');
-    const resetBtn = document.getElementById('resetForm');
-
-    function formatRupiah(num){ return new Intl.NumberFormat('id-ID').format(num); }
-
-    function calcTotal(){
-      let q = parseInt(qtyEl.value) || 1;
-      let total = q * PRICE;
-      const pkg = packageEl.value;
-      if(pkg === 'paket10' && q >= 10) total = Math.round(total * 0.95);
-      if(pkg === 'paket50' && q >= 50) total = Math.round(total * 0.90);
-      totalValueEl.textContent = formatRupiah(total);
-      return total;
-    }
-
-    qtyEl.addEventListener('input', calcTotal);
-    packageEl.addEventListener('change', calcTotal);
-    window.addEventListener('load', calcTotal);
-
-    // Modal
-    const successModal = document.getElementById('successModal');
-    const successText = document.getElementById('successText');
-    const closeModal = document.getElementById('closeModal');
-    const confirmReturn = document.getElementById('confirmReturn');
-
-    function showModal(message){ successText.textContent = message; successModal.style.display = 'flex'; }
-    function hideModal(){ successModal.style.display = 'none'; }
-
-    function checkPendingOrder(){
-      try{
-        const pending = localStorage.getItem('pending_order');
-        if(pending){
-          const data = JSON.parse(pending);
-          const elapsed = Date.now() - data.time;
-          if(elapsed > 1000 && elapsed < 24*60*60*1000){
-            showModal('Kami melihat Anda baru saja menyiapkan pesanan. Jika Anda sudah mengirim pesan di WhatsApp, klik "Saya sudah mengirim" untuk mengonfirmasi.');
-          }
-        }
-      }catch(e){console.error(e)}
-    }
-
-    sendBtn.addEventListener('click', async function(e){
-      e.preventDefault();
-      const name = document.getElementById('buyerName').value.trim();
-      const phone = document.getElementById('buyerPhone').value.trim();
-      const qty = parseInt(qtyEl.value) || 1;
-      const address = document.getElementById('address').value.trim();
-      const pkg = packageEl.value;
-      const total = calcTotal();
-
-      if(!name){ alert('Silakan isi nama lengkap.'); return; }
-      if(!phone){ alert('Silakan isi nomor WhatsApp.'); return; }
-      if(!address){ if(!confirm('Anda belum memasukkan alamat. Lanjut tanpa alamat?')) return; }
-
-      let pkgText = '';
-      if(pkg === 'paket10') pkgText = ' (Paket 10 - diskon 5%)';
-      if(pkg === 'paket50') pkgText = ' (Paket 50 - diskon 10%)';
-
-      const message = `Halo, saya mau pesan telur asin organik sebanyak ${qty} butir${pkgText}.\nNama: ${name}\nNo WA: ${phone}\nAlamat: ${address}\nTotal estimasi: Rp ${formatRupiah(total)}\nTerima kasih.`;
-      const waNumber = '6285183176504';
-      const waLink = 'https://wa.me/' + waNumber + '?text=' + encodeURIComponent(message);
-
-      try{ localStorage.setItem('pending_order', JSON.stringify({time: Date.now(), name: name, qty: qty, total: total})); }catch(e){}
-
-      if(WEBHOOK_URL){
-        const payload = {name:name, phone:phone, qty:qty, address:address, package:pkg, total:total, time: Date.now()};
-        try{ fetch(WEBHOOK_URL, {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)}).catch(err=>console.warn('Webhook error',err)); }catch(err){console.warn('Webhook failed',err)}
-      }
-
-      window.open(waLink, '_blank');
-      showModal('Kami telah membuka WhatsApp. Selesaikan pesan Anda lalu kembali ke sini. Jika sudah, klik "Saya sudah mengirim".');
-    });
-
-    confirmReturn.addEventListener('click', function(){ try{ localStorage.removeItem('pending_order'); }catch(e){} hideModal(); alert('Terima kasih! Pesanan Anda telah dikonfirmasi.'); });
-    closeModal.addEventListener('click', hideModal);
-    window.addEventListener('focus', function(){ checkPendingOrder(); });
-    window.addEventListener('load', function(){ checkPendingOrder(); });
-    resetBtn.addEventListener('click', function(){ document.getElementById('buyerName').value = ''; document.getElementById('buyerPhone').value = ''; qtyEl.value = 10; packageEl.value = 'none'; document.getElementById('address').value = ''; calcTotal(); });
-  </script>
 </body>
 </html>
